@@ -7,8 +7,6 @@ func Decode(payload []byte) (Packet, error) {
 		return nil, fmt.Errorf("Payload length must be a multiple of 8, was %d", len(payload))
 	}
 
-	println("Decode payload: ", len(payload))
-
 	messageId := extractNumber(payload, false, 0, 6)
 
 	switch messageId {
