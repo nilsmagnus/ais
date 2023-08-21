@@ -57,4 +57,8 @@ func TestDecodePackage5(t *testing.T) {
 		t.Fatalf("Expected call sign LDOK, got %s", sd.CallSign)
 	}
 
+	if sd.ShipType == 0 {
+		t.Fatalf("shiptype should not be 0")
+	}
+
 }
